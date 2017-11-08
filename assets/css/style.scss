@@ -3,9 +3,15 @@
 
 @import "{{ site.theme }}";
 
-p, li
+p
 {
 font-size: 75%;
+}
+
+
+li
+{
+font-size: 85%;
 }
 
 a[href ^= 'http']:not([href *= 'yourdomain.']) {
@@ -15,11 +21,6 @@ a[href ^= 'http']:not([href *= 'yourdomain.']) {
 
 
 	
-.amp {
-    font-family: Baskerville, 'Goudy Old Style', Palatino, 'Book Antiqua', serif;
-    font-style: italic;
-    font-weight: normal;
-}
 
 ul {
     margin: 0.75em 0;
