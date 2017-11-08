@@ -7,3 +7,8 @@ p, li
 {
 font-size: 75%;
 }
+
+a[href ^= 'http']:not([href *= 'yourdomain.']) {
+    background: transparent url(arrow.svg) no-repeat center right;
+    padding-right: 16px;
+}
