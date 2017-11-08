@@ -40,29 +40,56 @@ li:before {
     position: relative;
 }
 
-.ribbon {
-    background-color: #a00;
+ul.box {
+    position: relative;
+    z-index: 1; /* prevent shadows falling behind containers with backgrounds */
     overflow: hidden;
-    /* top left corner */
-    position: absolute;
-    left: -3em;
-    top: 2.5em;
-    /* 45 deg ccw rotation */
-    -moz-transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-    /* shadow */
-    -moz-box-shadow: 0 0 1em #888;
-    -webkit-box-shadow: 0 0 1em #888;
+    list-style: none;
+    margin: 0;
+    padding: 0; 
 }
-.ribbon a {
-    border: 1px solid #faa;
-    color: #fff;
-    display: block;
-    font: bold 81.25% 'Helvetiva Neue', Helvetica, Arial, sans-serif;
-    margin: 0.05em 0 0.075em 0;
-    padding: 0.5em 3.5em;
-    text-align: center;
-    text-decoration: none;
-    /* shadow */
-    text-shadow: 0 0 0.5em #444;
+ 
+ul.box li {
+    position: relative;
+    float: left;
+    width: 250px;
+    height: 150px;
+    padding: 0;
+    border: 1px solid #efefef;
+    margin: 0 30px 30px 0;
+    background: #fff;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset; 
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset; 
+}
+ 
+ul.box li:before,
+ul.box li:after {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    width: 70%;
+    max-width: 300px; /* avoid rotation causing ugly appearance at large container widths */
+    max-height: 100px;
+    height: 55%;
+    -webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    -webkit-transform: skew(-15deg) rotate(-6deg);
+    -moz-transform: skew(-15deg) rotate(-6deg);
+    -ms-transform: skew(-15deg) rotate(-6deg);
+    -o-transform: skew(-15deg) rotate(-6deg);
+    transform: skew(-15deg) rotate(-6deg); 
+}
+ 
+ul.box li:after {
+    left: auto;
+    right: 10px;
+    -webkit-transform: skew(15deg) rotate(6deg);
+    -moz-transform: skew(15deg) rotate(6deg);
+    -ms-transform: skew(15deg) rotate(6deg);
+    -o-transform: skew(15deg) rotate(6deg);
+    transform: skew(15deg) rotate(6deg); 
 }
