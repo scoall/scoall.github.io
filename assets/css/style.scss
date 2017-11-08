@@ -12,3 +12,14 @@ a[href ^= 'http']:not([href *= 'yourdomain.']) {
     background: transparent url(arrow.svg) no-repeat center right;
     padding-right: 16px;
 }
+
+
+
+p:first-letter{
+    display:block;
+    float:left;
+    margin:3px;
+    color: blue;
+    font-size:150%;
+}
+
